@@ -11,6 +11,6 @@ Start app
 ```sh
 $ npm start
 ```
-Access from the browser: http://localhost/user/register
+Access from the browser: http://localhost:3000/user/register
 
 
