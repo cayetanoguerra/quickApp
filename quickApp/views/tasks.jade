@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1=username + "'s tasks"
+	ul
+		each val in tasks
+			li=val.task		
+	p
+		| Add a new task
+		form(action="/tasks/newtask", method="post")
+			p
+				| task: 
+				input(type="text", name="task")
+			p
+				input(type="submit", value="Add task")

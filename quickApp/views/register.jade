@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h1= "Register a new user"
+  
+	form(action="/users/register", method="post")
+		p
+			| username: 
+			input(type="text", name="username")
+		p
+			| e-mail: 
+			input(type="text", name="email")
+		p
+		input(type="submit", value="Register")
