@@ -7,7 +7,7 @@ Start MongoDB server
 ```sh
 $ mongod --dbpath ./data/db
 ```
-Start app
+Start the app
 ```sh
 $ npm start
 ```
