@@ -7,6 +7,10 @@ Basic app in NodeJS+Express+MongoDB
 ```sh
 $ mongod --dbpath ./data/db
 ```
+2. jsfjskf
+```sh
+$ mongod --dbpath ./data/db
+```
 2. Start app
 ```sh
 $ npm start
