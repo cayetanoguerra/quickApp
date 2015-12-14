@@ -1,5 +1,5 @@
 # quickApp
-Basic app in NodeJS+Express+MongoDB
+Basic to-do list app in NodeJS+Express+MongoDB. This app is only for educational purposes.
 
 ####Steps for starting the app:####
 
