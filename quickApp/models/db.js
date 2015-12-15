@@ -5,6 +5,7 @@ var connection = mongoose.createConnection("mongodb://localhost/quickDB");
 var userTasksSchema = mongoose.Schema({ 
 			username: String,
 			email: String,
+			password: String,
 			tasks: [{
 				task: String,
 				date: { type: Date, default: Date.now }

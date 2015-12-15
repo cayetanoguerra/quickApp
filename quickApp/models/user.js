@@ -16,4 +16,17 @@ model.registerUser = function(userData, cb) {
 	user.save(cb);
 }
 
+
+/***************************
+
+	Login a user	
+
+***************************/
+
+model.loginUser = function(userData, cb) {
+	
+	userTasks.findOne({username: userData.username, password: userData.password}, cb);
+}
+
+
 module.exports = model;

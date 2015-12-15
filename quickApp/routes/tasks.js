@@ -11,8 +11,8 @@ var taskModel = require(__dirname + '/../models/task');
 
 router.post('/newtask', function(req, res, next) {
 	
-	taskModel.addNewTask('cayetano', req.body.task, function(err, result){
-		res.redirect('/tasks/cayetano');	
+	taskModel.addNewTask(req.session.username, req.body.task, function(err, result){
+		res.redirect('/tasks/' + req.session.username);	
 	});
 });
 
@@ -26,7 +26,11 @@ router.post('/newtask', function(req, res, next) {
 router.get('/:username', function(req, res, next) {
 	
 	taskModel.findUserTasks(req.params.username, function(err, user) {
-		res.render('tasks', user);
+		if (req.params.username == req.session.username) {
+			res.render('tasks_add', user);	
+		} else {
+			res.render('tasks', user);
+		}
 	});
 });
 
