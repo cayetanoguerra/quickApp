@@ -6,12 +6,12 @@ block content
 	form(action="/users/register", method="post")
 		p
 			| username: 
-			input(type="text", name="username")
+			input.form-control(type="text", name="username")
 		p
 			| password: 
-			input(type="password", name="password")
+			input.form-control(type="password", name="password")
 		p
 			| e-mail: 
-			input(type="text", name="email")
+			input.form-control.email(type="text", name="email")
 		p
-		input(type="submit", value="Register")
+		input.btn.btn-primary(type="submit", value="Register")

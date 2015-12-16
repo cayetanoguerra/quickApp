@@ -1,7 +1,21 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+    head
+        title=title
+        meta( name="viewport", content="width=device-width", initial-scale="1.0" )
+        link( href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css', rel='stylesheet' )
+        style.
+            body {
+                padding-top: 60px;
+            }
+    body
+        .navbar.navbar-inverse.navbar-fixed-top
+            .navbar-inner
+                .container
+                    .navbar-header
+                        button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#navbar-inverse", aria-expanded="false", aria-controls="navbar")
+                        a.navbar-brand(href="#") My To-Do List
+                        
+        .container
+           
+            block content

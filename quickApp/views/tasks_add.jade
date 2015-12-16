@@ -10,6 +10,6 @@ block content
 		form(action="/tasks/newtask", method="post")
 			p
 				| task: 
-				input(type="text", name="task")
+				input.form-control(type="text", name="task")
 			p
-				input(type="submit", value="Add task")
+				input.btn.btn-primary(type="submit", value="Add task")

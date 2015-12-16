@@ -2,13 +2,13 @@ extends layout
 
 block content
 	h1= "Login"
-  
+    
 	form(action="/users/login", method="post")
 		p
 			| username: 
-			input(type="text", name="username")
+			input.form-control(type="text", name="username")
 		p
 			| password: 
-			input(type="password", name="password")
+			input.form-control(type="password", name="password")
 		p
-		input(type="submit", value="Login")
+		input.btn.btn-primary(type="submit", value="Login")
