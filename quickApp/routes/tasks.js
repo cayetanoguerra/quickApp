@@ -26,11 +26,16 @@ router.post('/newtask', function(req, res, next) {
 router.get('/:username', function(req, res, next) {
 	
 	taskModel.findUserTasks(req.params.username, function(err, user) {
-		if (req.params.username == req.session.username) {
-			res.render('tasks_add', user);	
-		} else {
-			res.render('tasks', user);
-		}
+    	if (user != null) {
+            if (req.params.username == req.session.username) {
+			    res.render('tasks_add', user);	
+		    } else {
+			    res.render('tasks', user);
+		    }	
+    	}
+    	else {
+        	res.send('Usuario no encontrado');
+    	}
 	});
 });
 

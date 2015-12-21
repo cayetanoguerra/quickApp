@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 var userTasks = require('./db').getUserTasksModel();
 
+var redisUserTask = require('./db_redis')
+
 var model = {};
 
 
@@ -11,6 +13,8 @@ var model = {};
 ***************************/
 
 model.registerUser = function(userData, cb) {
+
+    //redisUserTask.set(userData.username, userData.email);
 
 	var user = new userTasks(userData);
 	user.save(cb);
