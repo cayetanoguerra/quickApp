@@ -26,7 +26,7 @@ describe("Login and tasks:", function() {
                 
         it("login succesful!", function(done) {
             request.post({url: url_login, form: {username : 'cayetano', password : 'lp9900'}}, function (error, response, body) {
-                sessId = (response.headers['set-cookie'][0].trim().split(';'))[0];
+                sessId = (response.headers['set-cookie'][0]);
                 expect(sessId).to.contain("sessionId");
                 done();
             });
