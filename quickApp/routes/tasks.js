@@ -24,6 +24,8 @@ router.post('/newtask', function(req, res, next) {
 ***************************/
 
 router.get('/:username', function(req, res, next) {
+    
+    console.log(req.headers);
 	
 	taskModel.findUserTasks(req.params.username, function(err, user) {
     	if (user != null) {
