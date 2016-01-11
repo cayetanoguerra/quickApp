@@ -17,7 +17,7 @@ describe("Login and tasks:", function() {
             });
         });
         
-        it("it contains 'cayetano's tasks string'", function(done) {
+        it("it contains 'cayetano's tasks' string", function(done) {
             request(url_tasks, function(err, response, body) {
                 expect(body).to.contain("cayetano's tasks");
                 done();
